@@ -5,16 +5,9 @@
 //  Created by 민성홍 on 2021/07/07.
 //
 
-import XCTest
 import Quick
 import Nimble
 @testable import BDDTest
-
-class Calculator {
-    func addNumbers(x: Int, y: Int) -> Int {
-        return x + y
-    }
-}
 
 class BDDTestTests: QuickSpec {
     let math = Calculator()
@@ -47,5 +40,23 @@ class BDDTestTests: QuickSpec {
                 }
             }
         }
+    }
+}
+
+class Calculator {
+    func addNumbers(x: Int, y: Int) -> Int {
+        return x + y
+    }
+
+    func minusNumbers(x: Int, y: Int) -> Int {
+        return x - y
+    }
+
+    func multiplyNumbers(x: Int, y: Int) -> Int {
+        return x * y
+    }
+
+    func divideNumbers(x: Float, y: Float) -> Float {
+        return x / y
     }
 }
